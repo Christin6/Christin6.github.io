@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Maricel Christina - Portfolio</title>
+        <meta name="description" content="A portfolio website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles.css" />
+
+        <style>
+            header {
+                text-align: center;
+            }
+
+            footer {
+                text-align: center;
+                position: static;
+            }
+
+            body {
+                background-color: #43334c;
+            }
+
+            .card .intro-p {
+                text-align: justify;
+            }
+
+            #intro-title,
+            #skills-title,
+            #facts-title {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="favThings.html">Favorite Things and Activities</a>
+                <a href="favPlace.html">Favorite Place</a>
+            </nav>
+        </header>
+        <main>
+            <section id="bio" class="card" style="width: min-content">
+                <div>
+                    <h1>
+                        Hi, I'm <br /><span
+                            class="underline"
+                            style="text-transform: capitalize;"
+                            >Maricel christina</span
+                        >
+                    </h1>
+                    <p>Student ID: 14682658</p>
+                    <a
+                        class="social-link"
+                        href="mailto:Maricel.Christina@student.uts.edu.au"
+                        >📫 Email</a
+                    >
+                    <a
+                        target="_blank"
+                        class="social-link"
+                        href="https://www.instagram.com/maricelchr/"
+                        >📸 Instagram</a
+                    >
+                </div>
+                <figure class="rotate-effect">
+                    <img
+                        id="bio-photo"
+                        src="images/photo.jpeg"
+                        alt="My photo"
+                    />
+                    <figcaption>Photo of me 🫶</figcaption>
+                </figure>
+            </section>
+            <section id="intro">
+                <h1 id="intro-title">About Me</h1>
+                <div
+                    style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    "
+                >
+                    <div class="card">
+                        <p class="intro-p">
+                            I was born in Bekasi, Indonesia, the country between
+                            the Asia and Australia continents. One of our most
+                            famous landmarks is probably the
+                            <a
+                                target="_blank"
+                                href="https://en.wikipedia.org/wiki/Borobudur"
+                                >Borobudur Temple</a
+                            >. It's the largest Buddhist temple in the world.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <p class="intro-p">
+                            I am currently
+                            <em>studying in UTS as a Diploma of IT student</em>.
+                            Outside of my study, I enjoy reading, doom
+                            scrolling, and sleeping.
+                        </p>
+                    </div>
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img
+                                    src="images/candi-borobudur-1.webp"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="flip-card-back">
+                                <p>The Borobudur Temple in Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/uts-building.webp" alt="" />
+                            </div>
+                            <div class="flip-card-back">
+                                <p>UTS Building</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="facts">
+                <h1 id="facts-title">Fun Facts</h1>
+                <div class="card">
+                    <p>
+                        One of my favorite fun facts about myself is that my
+                        favorite color is purple—even though almost nothing I
+                        own is actually purple. Somehow, I've ended up
+                        surrounded by blue items instead: most of my stationery,
+                        my water bottle, and my bag charm. And when it comes to
+                        clothes, black completely dominates my wardrobe. It's
+                        not even intentional; black just feels effortless,
+                        stylish, and safe for any occasion. Meanwhile, purple
+                        remains this color I rarely use in real life.
+                    </p>
+                </div>
+                <div class="card">
+                    <p>
+                        Another fun fact is that I have a habit of remembering
+                        oddly specific details about places I've been, even if I
+                        forget everything else about the day. I can recall the
+                        exact layout of a café I visited once two years ago or
+                        the color of the tiles in a random grocery store
+                        overseas—yet I'll completely forget what I ordered or
+                        why I was even there. It's like my brain collects
+                        background scenery as souvenirs. This quirk ends up
+                        being surprisingly useful: I'm almost never lost, I can
+                        retrace my steps purely by visual memory, and I often
+                        notice small design details that other people overlook.
+                        It also means that traveling feels especially magical,
+                        because every place leaves behind a tiny architectural
+                        snapshot in my mind.
+                    </p>
+                </div>
+            </section>
+            <section id="celeb-quote" class="soft-bg">
+                <img src="images/hankGreen.gif" alt="Hank Green GIF" />
+                <div>
+                    <p class="quote">
+                        I love online video. I've been obsessed with it since
+                        day one.
+                    </p>
+                    <p class="quote-author">Hank Green</p>
+                </div>
+            </section>
+            <section id="skills">
+                <h1 id="skills-title">Skills</h1>
+                <div>
+                    <div class="skill card">
+                        <figure>
+                            <img
+                                src="images/pexels-danny-meneses-340146-943096.jpg"
+                                alt="Coding in a laptop screen"
+                                class="rotate-effect"
+                            />
+                            <figcaption>
+                                <br />
+                                One of the most useful skills I've developed
+                                over the years is my ability to code in several
+                                programming languages, including Python, Java,
+                                and JavaScript. Along the way, I picked up some
+                                experience in GUI application development and
+                                web development, experimenting with small
+                                personal projects just to see what I could make.
+                                These skills have become tools I can rely on
+                                whenever I need to automate a task, build
+                                something functional, or simply create an idea
+                                from scratch.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="skill card">
+                        <figure>
+                            <img
+                                src="images/pexels-pixabay-54101.jpg"
+                                alt="Rubic cube"
+                                class="rotate-effect"
+                            />
+                            <figcaption>
+                                <br />
+                                On a completely different side of the spectrum,
+                                I also learned how to solve a Rubik's
+                                Cube—something I picked up in grade school
+                                simply because I had nothing better to do during
+                                breaks. It started as a random hobby, but it
+                                unexpectedly taught me patience, pattern
+                                recognition, and perseverance. I'm not as good
+                                at solving it as I used to, but some of the
+                                muscle memory still stays with me. Even though
+                                it's not a life-changing skill, it's a fun party
+                                trick.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="skill card">
+                        <figure>
+                            <img
+                                src="images/pexels-anete-lusina-4792086.jpg"
+                                alt="Crochet image"
+                                class="rotate-effect"
+                            />
+                            <figcaption>
+                                <br />
+                                One skill I really want to learn is crocheting.
+                                There's something charming about being able to
+                                turn a simple ball of yarn into something cute,
+                                useful, or meaningful. I've seen people make
+                                plushies, hats, coasters, and even full
+                                sweaters, and it feels like a craft that blends
+                                creativity with relaxation. Plus, it solves a
+                                long-standing personal problem: birthday gifts.
+                                If I learn to crochet properly, I can make
+                                personalized handmade presents instead of
+                                stressing over what to buy every year. It's a
+                                practical skill, but it also feels like a way to
+                                express care, personality, and effort in a way
+                                store-bought items can't.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="skill card">
+                        <figure>
+                            <img
+                                src="images/pexels-daniela-elena-tentis-118658-691114.jpg"
+                                alt="Food"
+                                class="rotate-effect"
+                            />
+                            <figcaption>
+                                <br />
+                                Another skill I want to pursue is cooking—real
+                                cooking, not just following recipes line-by-line
+                                and hoping for the best. Right now, I can follow
+                                instructions pretty well and improvise a little,
+                                but I want to reach the level where I can open
+                                the fridge, see a few random ingredients, and
+                                confidently create a good meal. To me, that's
+                                the difference between “knowing how to cook” and
+                                truly understanding food. Being able to adjust
+                                flavours, balance textures, and create dishes
+                                from instinct feels like both a valuable life
+                                skill and a creative outlet. I want cooking to
+                                become something I'm genuinely skilled at, not
+                                just something I manage to do.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="soft-bg">
+                <h1 id="contact-title">Want to know more? Let's talk :D</h1>
+                <form>
+                    <label for="name">Your Name: </label>
+                    <input type="text" name="name" id="" />
+                    <br />
+                    <label for="mesg">Your Message: </label>
+                    <textarea name="" id="" rows="5"></textarea>
+                    <br />
+                    <button type="submit" formtarget="_blank">Submit</button>
+                </form>
+            </section>
+        </main>
+        <footer class="card">
+            <p>© 2025 Maricel Christina</p>
+        </footer>
+    </body>
+</html>

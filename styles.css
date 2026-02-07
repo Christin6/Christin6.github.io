@@ -1,0 +1,488 @@
+/* 
+TOC
+1. variables 
+2. general
+3. effect and classes
+4. section specific ids and classes
+5. responsive
+*/
+
+
+/* variables */
+:root {
+    --darkest-color: #43334c;
+    --lightest-color: #f8f4ec;
+    --bold-color: #e83c91;
+    --soft-color: #ff8fb7;
+}
+
+
+/* general */
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    background-color: var(--darkest-color);
+    color: var(--lightest-color);
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header,
+footer {
+    margin: auto;
+}
+
+header {
+    width: 50%;
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-bottom: 3rem;
+    position: sticky;
+    top: 0;
+    border-radius: 1rem;
+    z-index: 1;
+    background-color: var(--darkest-color);
+    box-shadow: 2px 2px 1px var(--bold-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+header a {
+    transition: font-size 0.5s;
+}
+
+header a:hover {
+    font-size: 1.05rem;
+}
+
+header,
+.card {
+    transition: box-shadow 1s;
+}
+
+header:hover,
+.card:hover {
+    box-shadow: 4px 4px 2px 5px var(--bold-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+article {
+    margin-bottom: 5rem;
+}
+
+section {
+    margin-bottom: 5rem;
+    padding: 5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    color: var(--soft-color);
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: var(--bold-color);
+    font-style: italic;
+}
+
+a:active {
+    border: 1px solid var(--bold-color);
+}
+
+figure {
+    width: fit-content;
+    height: fit-content;
+}
+
+img {
+    border-radius: 1rem;
+}
+
+footer {
+    padding: 4rem 0;
+    width: 90%;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/* effect and classes */
+.soft-bg {
+    background-color: var(--soft-color);
+    text-shadow: var(--darkest-color) 3px 3px 0;
+}
+
+.soft-bg label,
+.soft-bg p {
+    text-shadow: var(--darkest-color) 1px 1px 0;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+article,
+section,
+figure {
+    animation: fadein 1s;
+    position: relative;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        top: -50px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.banner-container {
+    aspect-ratio: 16/4;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0 auto -2rem;
+    z-index: -1;
+}
+
+.banner-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+.social-link {
+    margin-right: 1rem;
+}
+
+#bio .underline {
+    font-size: 7rem;
+}
+
+span.underline {
+    text-decoration: underline solid var(--soft-color) 0.3rem;
+    transition: text-decoration 1s;
+}
+
+span.underline:hover {
+    text-decoration: underline solid var(--bold-color) 1rem;
+}
+
+em {
+    color: var(--soft-color);
+    font-style: normal;
+}
+
+em::after,
+em::before {
+    content: "✨";
+    animation: bling 2s infinite;
+}
+
+@keyframes bling {
+    0% {
+        opacity: 0.25;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.rotate-effect {
+    transition: all 0.5s;
+}
+
+.rotate-effect:hover {
+    transform: rotate(5deg);
+    border-radius: 8px;
+    border: 10px solid var(--bold-color);
+}
+
+.flip-card {
+    z-index: 0;
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    background-color: var(--soft-color);
+    color: var(--lightest-color);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* section specific ids and classes */
+#bio {
+    display: flex;
+    padding: 2rem 1rem 2rem 3rem;
+}
+
+#bio-photo {
+    height: 20rem;
+    width: auto;
+}
+
+#intro .card {
+    width: 40%;
+}
+
+#facts .card {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#celeb-quote {
+    display: flex;
+}
+
+.quote,
+.quote-author {
+    margin-left: 2rem;
+}
+
+.quote {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+#skills > div {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.skill {
+    display: inline-block;
+    width: 30%;
+    white-space: normal;
+    vertical-align: top;
+    padding: 1.5rem;
+}
+
+.skill figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.skill img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.skill figcaption {
+    white-space: normal;
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+#contact h1 {
+    font-size: 3rem;
+    margin-right: 4rem;
+    width: 80%;
+}
+
+#contact form {
+    width: 100%;
+}
+
+#contact input,
+#contact textarea {
+    margin: 0.2rem 0 1rem;
+    width: 95%;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    border: 0.2rem solid var(--darkest-color);
+}
+
+#contact button {
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    background-color: var(--bold-color);
+    color: var(--lightest-color);
+    box-shadow: 2px 2px 1px 3px var(--darkest-color);
+    transition: box-shadow 0.5s;
+}
+
+#contact button:hover {
+    box-shadow: none;
+}
+
+
+/* responsive */
+/* Styles for small mobile devices */
+@media (max-width: 580px) {
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        width: 90%;
+    }
+
+    #bio {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #bio .underline {
+        font-size: 5rem;
+    }
+
+    #intro .card {
+        width: 100%;
+    }
+
+    #facts .card {
+        width: 100%;
+    }
+
+    #celeb-quote {
+        flex-wrap: wrap;
+    }
+
+    #celeb-quote img {
+        width: 100%;
+        height: auto;
+    }
+
+    #skills {
+        width: 100%;
+    }
+
+    #skills .card {
+        width: 100%;
+    }
+
+    #contact {
+        flex-wrap: wrap;
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+
+    #contact h1 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Styles for tablets and small laptops */
+@media (min-width: 581px) and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    header {
+        width: 70%;
+    }
+
+    #bio {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #intro .card {
+        width: 50%;
+    }
+
+    #facts .card {
+        width: 80%;
+    }
+
+    #celeb-quote {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #skills .card {
+        width: 50%;
+    }
+
+    #contact {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
