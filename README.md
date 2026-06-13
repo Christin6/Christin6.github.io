@@ -1,2 +1,3 @@
 # Christin6.github.io
-Personal website
+Personal website, first year project
+
